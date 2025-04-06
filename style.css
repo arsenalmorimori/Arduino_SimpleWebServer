@@ -1,0 +1,149 @@
+body{
+    margin: 0 0;
+    padding: 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--black);
+}
+
+/* HOME */
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 99vh;
+}
+.home h1{
+    margin: 6rem 0 0;
+    font-family: "cascadia";
+    color: var(--white);
+    font-size: 4rem;
+    line-height: 3rem;
+    font-weight: 600;
+}
+.home h2{
+    margin: 1.5rem 0;
+    font-family: "cascadia";
+    font-weight: 600;
+    color: var(--white);
+    font-size: 1.7rem;
+    line-height: 1rem;
+}
+.home .button_wrapper{
+    display: flex;
+    margin-top: 4rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    width: 50%;
+}
+.home .button_wrapper button:nth-child(1){
+    background-color: var(--red);
+}
+.home .button_wrapper button:nth-child(2){
+    background-color: var(--blue);
+}
+.home .button_wrapper button:nth-child(3){
+    background-color: var(--green);
+}
+.home .button_wrapper button:nth-child(4){
+    background-color: var(--yellow);
+}
+@media screen and (max-width:1851px) {
+    .home .button_wrapper{
+        width: 65%;
+    }
+}
+
+/* PROMPT */
+.prompt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark);
+    margin: 1rem 0;
+    border-radius: 3rem 0rem 0rem 3rem;
+}
+.prompt h1{
+    margin: 6rem 0 0;
+    font-family: "cascadia";
+    color: var(--white);
+    font-size: 4rem;
+    line-height: 3rem;
+    font-weight: 600;
+}
+
+.prompt .prompt_wrapper{
+    height: 25rem;
+    max-height: 25rem;
+    width: 60%;
+    margin: 2rem 0 0;
+    padding: 2rem 3rem;
+    border-radius: 2rem;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    overflow-y:auto;
+}
+.prompt .prompt_wrapper p{
+  display: flex;
+  align-items: flex-start;
+}
+.prompt .prompt_wrapper p{
+    font-family: "cascadia";
+    color: var(--black);
+    font-size: 1rem;
+    line-height: 0.5rem;
+}
+
+/* REPEATABLE PATTERN */
+:root{
+    --black:#262525;
+    --dark:#1e1e1e;
+    --darkLight:#232222;
+    --white:#d5d5d5;
+    --red:#f46464;
+    --blue:#64aef4;
+    --green:#6dec7c;
+    --yellow:#d7ec6d;
+}
+
+@font-face {
+    font-family: "cascadia";
+    src: url(src/Cascadia.ttf);
+}
+
+/* -- BUTTON */
+.btn{
+   width: 10rem; 
+   height: 10rem;
+   border: none;
+   border-radius: 3rem;
+   opacity: 0.5;
+   transition: 0.5s ease;
+}
+
+.btn.active{
+   width: 10rem; 
+   height: 10rem;
+   border: none;
+   border-radius: 3rem;
+   opacity: 1;
+   transition: 0.5s ease;
+}
+
+::-webkit-scrollbar {
+    width: 0px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* color of the scroll thumb */
+    border-radius: 4px; /* rounded corners for the thumb */
+    transition: background-color 0.3s ease; /* smooth transition for hover effect */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* background color of the track */
+    border-radius: 4px;
+}
